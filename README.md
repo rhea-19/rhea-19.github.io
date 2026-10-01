@@ -1,35 +1,37 @@
-# Rhea Sudheer — Technical Portfolio
+# Rhea Sudheer — Portfolio
 
-This is the evidence-led technical version of the portfolio.
+Personal portfolio featuring production software engineering, AI and retrieval systems, low-level systems, and published research.
+
+[View the portfolio](https://rhea-19.github.io/)
 
 ## Preview locally
 
-From this folder:
+This is a static site with no build step. From the repository root:
 
 ```bash
-python3 -m http.server 8001
+python3 -m http.server 8001 --bind 127.0.0.1
 ```
 
-Then open:
+Open [localhost:8001](http://localhost:8001). If the port is occupied, choose another port.
 
-```text
-http://localhost:8001
-```
+## Site files
 
-If 8001 is already in use, use 8002, 8080, etc.
+- `index.html`: portfolio content, project source links, experience, publications, and contact details.
+- `styles.css`: responsive layouts, typography, and visual styling.
+- `script.js`: mobile navigation, project filters, scroll progress, and reveal effects.
+- `project-quicklook.js`: accessible “How it works” project dialogs.
+- `assets/`: photographs and downloadable résumés.
 
-## Publish with GitHub Pages
+The résumé selector offers Backend / Software Engineering and AI / ML & Systems versions. The Data Science résumé is currently unlisted.
 
-1. Create a repository named `<your-github-username>.github.io`.
-2. Upload the **contents of this folder** to the repository root (not the enclosing folder).
-3. In GitHub: **Settings → Pages → Deploy from a branch → main → /(root)**.
-4. Your site will be available at `https://<your-github-username>.github.io/`.
+## Project browsing
 
-## Before publishing
+Additional projects can be filtered by category. “How it works” opens a quick-look dialog with the project's workflow and available source links, without expanding neighboring cards. Escape, the close button, or a click outside the dialog dismisses it and restores focus to the opener. Native inline disclosures remain available without JavaScript.
 
-The site intentionally does not invent a GitHub profile/repository URL. Add real repository links when you decide which repositories should be public and recruiter-facing.
+Public project entries link to matching GitHub repositories and, where available, implementation files, notebooks, or reports. Publications include DOI links.
 
-The publication DOI links are already included. Resume PDFs and all three portfolio photographs are bundled under `assets/`.
+## GitHub Pages
 
+The publishing repository is `rhea-19/rhea-19.github.io`. Configure **Settings → Pages → Deploy from a branch → main → /(root)**. Changes pushed to `main` are published by GitHub Pages when deployment completes.
 
-This v2 revision increases layout scale, widens the content area, enlarges the hero, and improves large-screen coverage.
+When changing CSS or JavaScript, update the corresponding asset version in `index.html` so returning visitors receive the latest files.
